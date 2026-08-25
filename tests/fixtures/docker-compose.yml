@@ -1,0 +1,7 @@
+services:
+  web:
+    image: nginx
+    volumes:
+      - ./missing-dir:/etc/nginx/conf.d
+    ports:
+      - "8099:80"
