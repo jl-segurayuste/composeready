@@ -78,7 +78,8 @@ def iter_services(data: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
 def find_compose_file(path: Path) -> Path | None:
     if path.is_file():
         return path
-    for name in ("docker-compose.yml", "docker-compose.yaml", "compose.yml", "compose.yaml"):
+    # El mismo orden que `docker compose`: si hay varios, se comprueba el que va a usar.
+    for name in ("compose.yaml", "compose.yml", "docker-compose.yml", "docker-compose.yaml"):
         candidate = path / name
         if candidate.is_file():
             return candidate

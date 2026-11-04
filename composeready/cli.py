@@ -4,6 +4,8 @@ import argparse
 import sys
 from pathlib import Path
 
+import yaml
+
 from .checks import bind_mounts, gpu, ports
 from .compose import find_compose_file, iter_services, load_compose, project_env
 from .finding import Finding
@@ -59,7 +61,12 @@ def main(argv: list[str] | None = None) -> int:
         print(f"composeready: no se encontró ningún fichero compose en '{args.path}'", file=sys.stderr)
         return 2
 
-    findings = run(compose_path, set(args.skip))
+    try:
+        findings = run(compose_path, set(args.skip))
+    except (OSError, yaml.YAMLError) as exc:
+        # 2 y no 1: 1 significa «el host no cumple»; un compose ilegible es otra cosa.
+        print(f"composeready: no se pudo leer {compose_path}: {exc}", file=sys.stderr)
+        return 2
 
     if not findings:
         print(f"composeready: {compose_path} — listo, el host cumple lo que asume.")

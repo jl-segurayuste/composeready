@@ -12,8 +12,9 @@ Tres cosas que Docker solo descubre en el momento:
 - **Puertos publicados**: si `8080:80` ya está ocupado por otra cosa, el
   error de "address already in use" no siempre deja claro *qué* servicio
   del compose falló ni por qué.
-- **GPU/NVIDIA**: si el servicio pide `runtime: nvidia` o
-  `deploy.resources.reservations.devices` con `driver: nvidia` y el host
+- **GPU/NVIDIA**: si el servicio pide `runtime: nvidia`, `gpus: all`, un
+  dispositivo CDI `nvidia.com/gpu=...` o `deploy.resources.reservations.devices`
+  con `driver: nvidia` y el host
   no tiene el runtime instalado, el contenedor puede arrancar igualmente
   — solo que corriendo por CPU, en silencio, sin ningún error visible.
 

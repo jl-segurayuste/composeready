@@ -33,3 +33,9 @@ def test_cli_finds_compose_in_directory(tmp_path):
 def test_cli_skip_flag(capsys):
     code = main([str(FIXTURES / "docker-compose.yml"), "--skip", "bind_mount", "--skip", "port"])
     assert code == 0
+
+
+def test_cli_yaml_invalido_sale_2_sin_traza(tmp_path, capsys):
+    (tmp_path / "compose.yml").write_text("services:\n  a: [\n")
+    assert main([str(tmp_path)]) == 2
+    assert "no se pudo leer" in capsys.readouterr().err

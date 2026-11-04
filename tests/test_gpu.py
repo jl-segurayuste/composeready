@@ -46,3 +46,18 @@ def test_deploy_without_gpu_capability_ignored():
         "deploy": {"resources": {"reservations": {"devices": [{"driver": "something-else"}]}}}
     }
     assert gpu.check("web", service) == []
+
+
+def test_gpus_y_cdi_detectados(monkeypatch):
+    monkeypatch.setattr(gpu.glob, "glob", lambda pattern: [])
+    monkeypatch.setattr(gpu.shutil, "which", lambda name: None)
+    servicios = [
+        {"gpus": "all"},
+        {"devices": ["nvidia.com/gpu=all"]},
+        {"devices": [{"source": "nvidia.com/gpu=0", "target": "x"}]},
+        {"deploy": {"resources": {"reservations": {"devices": [
+            {"driver": "cdi", "device_ids": ["nvidia.com/gpu=all"]}]}}}},
+    ]
+    for svc in servicios:
+        assert len(gpu.check("ia", svc)) == 1, svc
+    assert gpu.check("web", {"devices": ["/dev/ttyUSB0:/dev/ttyUSB0"]}) == []

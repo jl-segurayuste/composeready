@@ -60,3 +60,11 @@ def test_project_env_reads_dotenv_and_environment_wins(tmp_path, monkeypatch):
     monkeypatch.setenv("OTRA", "2")
     env = project_env(tmp_path)
     assert env["WEB_PORT"] == "9000" and env["DATA"] == "./d" and env["OTRA"] == "2"
+
+
+def test_find_compose_file_mismo_orden_que_docker(tmp_path):
+    from composeready.compose import find_compose_file
+
+    for name in ("docker-compose.yml", "compose.yml", "compose.yaml"):
+        (tmp_path / name).write_text("services: {}\n")
+    assert find_compose_file(tmp_path).name == "compose.yaml"

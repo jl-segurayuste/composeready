@@ -7,4 +7,4 @@ publicados no estén ya ocupados, y que el runtime NVIDIA esté disponible
 si el compose pide GPU.
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
