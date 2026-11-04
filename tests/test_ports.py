@@ -63,3 +63,22 @@ def test_long_form():
 
 def test_no_ports_key():
     assert check("web", {}) == []
+
+
+def test_flags_port_from_variable_default_and_dotenv(tmp_path):
+    port = _free_port()
+    holder = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    holder.bind(("0.0.0.0", port))
+    holder.listen(1)
+    try:
+        assert len(check("web", {"ports": [f"${{WEB_PORT:-{port}}}:80"]}, env={})) == 1
+        assert len(check("web", {"ports": ["${WEB_PORT}:80"]}, env={"WEB_PORT": str(port)})) == 1
+        assert len(check("web", {"ports": [{"target": 80, "published": "${P}"}]}, env={"P": str(port)})) == 1
+
+        from composeready.cli import run
+
+        (tmp_path / ".env").write_text(f"WEB_PORT={port}\n")
+        (tmp_path / "compose.yml").write_text('services:\n  w:\n    ports: ["${WEB_PORT:-1}:80"]\n')
+        assert [f.check for f in run(tmp_path / "compose.yml", set())] == ["port"]
+    finally:
+        holder.close()

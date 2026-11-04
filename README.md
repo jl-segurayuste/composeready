@@ -46,8 +46,10 @@ Sale con código 1 si encuentra algo, 0 si el host está listo.
   solo que exista al menos un `/dev/nvidia*` y el binario `nvidia-smi`.
   Es la comprobación mínima determinista de "¿hay GPU aquí siquiera?",
   no un diagnóstico completo del stack NVIDIA.
-- Sustitución de variables de entorno más allá de `${VAR}`, `${VAR:-def}`
-  y `$VAR` — no reimplementa el intérprete completo de Compose.
+- Sustitución de variables más allá de `${VAR}`, `${VAR:-def}`, `${VAR-def}`
+  y `$VAR` — no reimplementa el intérprete completo de Compose. Las variables
+  salen, como en Compose, del `.env` de la carpeta del proyecto y del entorno
+  (que tiene prioridad).
 
 ## Desarrollo
 

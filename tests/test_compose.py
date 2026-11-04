@@ -46,3 +46,17 @@ def test_load_compose_non_dict_yaml(tmp_path):
     f = tmp_path / "weird.yml"
     f.write_text("- just\n- a\n- list\n")
     assert load_compose(f) == {}
+
+
+def test_resolve_env_colon_default_with_empty_value():
+    assert resolve_env("${FOO:-bar}", env={"FOO": ""}) == "bar"
+    assert resolve_env("${FOO-bar}", env={"FOO": ""}) == ""
+
+
+def test_project_env_reads_dotenv_and_environment_wins(tmp_path, monkeypatch):
+    from composeready.compose import project_env
+
+    (tmp_path / ".env").write_text('# c\nWEB_PORT=9000\nexport DATA="./d"\nOTRA=1 # nota\n')
+    monkeypatch.setenv("OTRA", "2")
+    env = project_env(tmp_path)
+    assert env["WEB_PORT"] == "9000" and env["DATA"] == "./d" and env["OTRA"] == "2"

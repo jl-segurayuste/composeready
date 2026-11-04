@@ -1,6 +1,6 @@
 [project]
 name = "composeready"
-version = "0.1.0"
+version = "0.1.1"
 description = "Comprueba, antes de 'docker compose up', si el host real cumple lo que el compose asume: rutas de bind-mount, puertos libres y GPU/NVIDIA runtime."
 readme = "README.md"
 license = { text = "MIT" }

@@ -29,7 +29,9 @@ def _short_form_source(entry: str) -> str | None:
     return source if _looks_like_host_path(source) else None
 
 
-def check(service_name: str, service: dict[str, Any], compose_dir: Path) -> list[Finding]:
+def check(
+    service_name: str, service: dict[str, Any], compose_dir: Path, env: dict[str, str] | None = None
+) -> list[Finding]:
     findings: list[Finding] = []
     volumes = service.get("volumes")
     if not isinstance(volumes, list):
@@ -39,11 +41,11 @@ def check(service_name: str, service: dict[str, Any], compose_dir: Path) -> list
         source: str | None = None
 
         if isinstance(entry, str):
-            source = _short_form_source(resolve_env(entry))
+            source = _short_form_source(resolve_env(entry, env))
         elif isinstance(entry, dict) and entry.get("type") == "bind":
             raw = entry.get("source")
             if isinstance(raw, str):
-                resolved = resolve_env(raw)
+                resolved = resolve_env(raw, env)
                 if _looks_like_host_path(resolved) or Path(resolved).is_absolute():
                     source = resolved
 

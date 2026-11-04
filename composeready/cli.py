@@ -5,20 +5,21 @@ import sys
 from pathlib import Path
 
 from .checks import bind_mounts, gpu, ports
-from .compose import find_compose_file, iter_services, load_compose
+from .compose import find_compose_file, iter_services, load_compose, project_env
 from .finding import Finding
 
 
 def run(compose_path: Path, skip: set[str]) -> list[Finding]:
     data = load_compose(compose_path)
     compose_dir = compose_path.parent
+    env = project_env(compose_dir)
     findings: list[Finding] = []
 
     for name, service in iter_services(data):
         if "bind_mount" not in skip:
-            findings.extend(bind_mounts.check(name, service, compose_dir))
+            findings.extend(bind_mounts.check(name, service, compose_dir, env))
         if "port" not in skip:
-            findings.extend(ports.check(name, service))
+            findings.extend(ports.check(name, service, env))
         if "gpu" not in skip:
             findings.extend(gpu.check(name, service))
 

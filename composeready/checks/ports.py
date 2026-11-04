@@ -12,6 +12,7 @@ from __future__ import annotations
 import socket
 from typing import Any
 
+from ..compose import resolve_env
 from ..finding import Finding
 
 
@@ -45,7 +46,7 @@ def _is_port_taken(port: int) -> bool | None:
         sock.close()
 
 
-def check(service_name: str, service: dict[str, Any]) -> list[Finding]:
+def check(service_name: str, service: dict[str, Any], env: dict[str, str] | None = None) -> list[Finding]:
     findings: list[Finding] = []
     ports = service.get("ports")
     if not isinstance(ports, list):
@@ -56,6 +57,9 @@ def check(service_name: str, service: dict[str, Any]) -> list[Finding]:
         protocol = "tcp"
 
         if isinstance(entry, str):
+            # "${WEB_PORT:-8080}:80": sin resolver, el "-" del valor por defecto parecía un rango
+            # y el puerto no se comprobaba
+            entry = resolve_env(entry, env)
             host_port = _short_form_host_port(entry)
             if "/udp" in entry:
                 protocol = "udp"
@@ -63,6 +67,8 @@ def check(service_name: str, service: dict[str, Any]) -> list[Finding]:
             host_port = None  # forma corta "80" sin publicar, nada que comprobar
         elif isinstance(entry, dict):
             published = entry.get("published")
+            if isinstance(published, str):
+                published = resolve_env(published, env)
             protocol = entry.get("protocol", "tcp")
             if published is not None:
                 try:
