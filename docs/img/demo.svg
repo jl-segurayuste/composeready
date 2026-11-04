@@ -20,80 +20,80 @@
         font-weight: 700;
     }
 
-    .terminal-2102088711-matrix {
+    .terminal-2180142089-matrix {
         font-family: Fira Code, monospace;
         font-size: 20px;
         line-height: 24.4px;
         font-variant-east-asian: full-width;
     }
 
-    .terminal-2102088711-title {
+    .terminal-2180142089-title {
         font-size: 18px;
         font-weight: bold;
         font-family: arial;
     }
 
-    .terminal-2102088711-r1 { fill: #98a84b;font-weight: bold }
-.terminal-2102088711-r2 { fill: #c5c8c6 }
+    .terminal-2180142089-r1 { fill: #98a84b;font-weight: bold }
+.terminal-2180142089-r2 { fill: #c5c8c6 }
     </style>
 
     <defs>
-    <clipPath id="terminal-2102088711-clip-terminal">
+    <clipPath id="terminal-2180142089-clip-terminal">
       <rect x="0" y="0" width="1267.8" height="267.4" />
     </clipPath>
-    <clipPath id="terminal-2102088711-line-0">
+    <clipPath id="terminal-2180142089-line-0">
     <rect x="0" y="1.5" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-1">
+<clipPath id="terminal-2180142089-line-1">
     <rect x="0" y="25.9" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-2">
+<clipPath id="terminal-2180142089-line-2">
     <rect x="0" y="50.3" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-3">
+<clipPath id="terminal-2180142089-line-3">
     <rect x="0" y="74.7" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-4">
+<clipPath id="terminal-2180142089-line-4">
     <rect x="0" y="99.1" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-5">
+<clipPath id="terminal-2180142089-line-5">
     <rect x="0" y="123.5" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-6">
+<clipPath id="terminal-2180142089-line-6">
     <rect x="0" y="147.9" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-7">
+<clipPath id="terminal-2180142089-line-7">
     <rect x="0" y="172.3" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-8">
+<clipPath id="terminal-2180142089-line-8">
     <rect x="0" y="196.7" width="1268.8" height="24.65"/>
             </clipPath>
-<clipPath id="terminal-2102088711-line-9">
+<clipPath id="terminal-2180142089-line-9">
     <rect x="0" y="221.1" width="1268.8" height="24.65"/>
             </clipPath>
     </defs>
 
-    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1285" height="316.4" rx="8"/><text class="terminal-2102088711-title" fill="#c5c8c6" text-anchor="middle" x="642" y="27">composeready</text>
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1285" height="316.4" rx="8"/><text class="terminal-2180142089-title" fill="#c5c8c6" text-anchor="middle" x="642" y="27">composeready</text>
             <g transform="translate(26,22)">
             <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
             <circle cx="22" cy="0" r="7" fill="#febc2e"/>
             <circle cx="44" cy="0" r="7" fill="#28c840"/>
             </g>
         
-    <g transform="translate(9, 41)" clip-path="url(#terminal-2102088711-clip-terminal)">
+    <g transform="translate(9, 41)" clip-path="url(#terminal-2180142089-clip-terminal)">
     
-    <g class="terminal-2102088711-matrix">
-    <text class="terminal-2102088711-r1" x="0" y="20" textLength="24.4" clip-path="url(#terminal-2102088711-line-0)">$&#160;</text><text class="terminal-2102088711-r1" x="24.4" y="20" textLength="170.8" clip-path="url(#terminal-2102088711-line-0)">composeready&#160;.</text><text class="terminal-2102088711-r2" x="1268.8" y="20" textLength="12.2" clip-path="url(#terminal-2102088711-line-0)">
-</text><text class="terminal-2102088711-r2" x="0" y="44.4" textLength="963.8" clip-path="url(#terminal-2102088711-line-1)">[bind_mount]&#160;servicio&#160;&#x27;web&#x27;:&#160;la&#160;ruta&#160;de&#160;origen&#160;&#x27;./sitio&#x27;&#160;no&#160;existe&#160;en&#160;este&#160;host</text><text class="terminal-2102088711-r2" x="1268.8" y="44.4" textLength="12.2" clip-path="url(#terminal-2102088711-line-1)">
-</text><text class="terminal-2102088711-r2" x="0" y="68.8" textLength="292.8" clip-path="url(#terminal-2102088711-line-2)">&#160;&#160;&#160;&#160;se&#160;resolvió&#160;a:&#160;sitio</text><text class="terminal-2102088711-r2" x="1268.8" y="68.8" textLength="12.2" clip-path="url(#terminal-2102088711-line-2)">
-</text><text class="terminal-2102088711-r2" x="0" y="93.2" textLength="866.2" clip-path="url(#terminal-2102088711-line-3)">[port]&#160;servicio&#160;&#x27;web&#x27;:&#160;el&#160;puerto&#160;54683/tcp&#160;ya&#160;está&#160;ocupado&#160;en&#160;este&#160;host</text><text class="terminal-2102088711-r2" x="1268.8" y="93.2" textLength="12.2" clip-path="url(#terminal-2102088711-line-3)">
-</text><text class="terminal-2102088711-r2" x="0" y="117.6" textLength="756.4" clip-path="url(#terminal-2102088711-line-4)">&#160;&#160;&#160;&#160;algo&#160;(otro&#160;contenedor,&#160;otro&#160;servicio)&#160;ya&#160;lo&#160;tiene&#160;enlazado</text><text class="terminal-2102088711-r2" x="1268.8" y="117.6" textLength="12.2" clip-path="url(#terminal-2102088711-line-4)">
-</text><text class="terminal-2102088711-r2" x="0" y="142" textLength="1012.6" clip-path="url(#terminal-2102088711-line-5)">[bind_mount]&#160;servicio&#160;&#x27;ia&#x27;:&#160;la&#160;ruta&#160;de&#160;origen&#160;&#x27;/srv/modelos&#x27;&#160;no&#160;existe&#160;en&#160;este&#160;host</text><text class="terminal-2102088711-r2" x="1268.8" y="142" textLength="12.2" clip-path="url(#terminal-2102088711-line-5)">
-</text><text class="terminal-2102088711-r2" x="0" y="166.4" textLength="378.2" clip-path="url(#terminal-2102088711-line-6)">&#160;&#160;&#160;&#160;se&#160;resolvió&#160;a:&#160;/srv/modelos</text><text class="terminal-2102088711-r2" x="1268.8" y="166.4" textLength="12.2" clip-path="url(#terminal-2102088711-line-6)">
-</text><text class="terminal-2102088711-r2" x="0" y="190.8" textLength="915" clip-path="url(#terminal-2102088711-line-7)">[gpu]&#160;servicio&#160;&#x27;ia&#x27;:&#160;pide&#160;GPU&#160;NVIDIA&#160;pero&#160;este&#160;host&#160;no&#160;parece&#160;tenerla&#160;lista</text><text class="terminal-2102088711-r2" x="1268.8" y="190.8" textLength="12.2" clip-path="url(#terminal-2102088711-line-7)">
-</text><text class="terminal-2102088711-r2" x="0" y="215.2" textLength="1000.4" clip-path="url(#terminal-2102088711-line-8)">&#160;&#160;&#160;&#160;no&#160;se&#160;encontró&#160;ningún&#160;/dev/nvidia*&#160;en&#160;este&#160;host;&#160;nvidia-smi&#160;no&#160;está&#160;en&#160;el&#160;PATH</text><text class="terminal-2102088711-r2" x="1268.8" y="215.2" textLength="12.2" clip-path="url(#terminal-2102088711-line-8)">
-</text><text class="terminal-2102088711-r2" x="1268.8" y="239.6" textLength="12.2" clip-path="url(#terminal-2102088711-line-9)">
-</text><text class="terminal-2102088711-r2" x="0" y="264" textLength="561.2" clip-path="url(#terminal-2102088711-line-10)">4&#160;problema(s)&#160;encontrado(s)&#160;antes&#160;de&#160;arrancar.</text><text class="terminal-2102088711-r2" x="1268.8" y="264" textLength="12.2" clip-path="url(#terminal-2102088711-line-10)">
+    <g class="terminal-2180142089-matrix">
+    <text class="terminal-2180142089-r1" x="0" y="20" textLength="24.4" clip-path="url(#terminal-2180142089-line-0)">$&#160;</text><text class="terminal-2180142089-r1" x="24.4" y="20" textLength="170.8" clip-path="url(#terminal-2180142089-line-0)">composeready&#160;.</text><text class="terminal-2180142089-r2" x="1268.8" y="20" textLength="12.2" clip-path="url(#terminal-2180142089-line-0)">
+</text><text class="terminal-2180142089-r2" x="0" y="44.4" textLength="963.8" clip-path="url(#terminal-2180142089-line-1)">[bind_mount]&#160;servicio&#160;&#x27;web&#x27;:&#160;la&#160;ruta&#160;de&#160;origen&#160;&#x27;./sitio&#x27;&#160;no&#160;existe&#160;en&#160;este&#160;host</text><text class="terminal-2180142089-r2" x="1268.8" y="44.4" textLength="12.2" clip-path="url(#terminal-2180142089-line-1)">
+</text><text class="terminal-2180142089-r2" x="0" y="68.8" textLength="292.8" clip-path="url(#terminal-2180142089-line-2)">&#160;&#160;&#160;&#160;se&#160;resolvió&#160;a:&#160;sitio</text><text class="terminal-2180142089-r2" x="1268.8" y="68.8" textLength="12.2" clip-path="url(#terminal-2180142089-line-2)">
+</text><text class="terminal-2180142089-r2" x="0" y="93.2" textLength="866.2" clip-path="url(#terminal-2180142089-line-3)">[port]&#160;servicio&#160;&#x27;web&#x27;:&#160;el&#160;puerto&#160;34399/tcp&#160;ya&#160;está&#160;ocupado&#160;en&#160;este&#160;host</text><text class="terminal-2180142089-r2" x="1268.8" y="93.2" textLength="12.2" clip-path="url(#terminal-2180142089-line-3)">
+</text><text class="terminal-2180142089-r2" x="0" y="117.6" textLength="756.4" clip-path="url(#terminal-2180142089-line-4)">&#160;&#160;&#160;&#160;algo&#160;(otro&#160;contenedor,&#160;otro&#160;servicio)&#160;ya&#160;lo&#160;tiene&#160;enlazado</text><text class="terminal-2180142089-r2" x="1268.8" y="117.6" textLength="12.2" clip-path="url(#terminal-2180142089-line-4)">
+</text><text class="terminal-2180142089-r2" x="0" y="142" textLength="1012.6" clip-path="url(#terminal-2180142089-line-5)">[bind_mount]&#160;servicio&#160;&#x27;ia&#x27;:&#160;la&#160;ruta&#160;de&#160;origen&#160;&#x27;/srv/modelos&#x27;&#160;no&#160;existe&#160;en&#160;este&#160;host</text><text class="terminal-2180142089-r2" x="1268.8" y="142" textLength="12.2" clip-path="url(#terminal-2180142089-line-5)">
+</text><text class="terminal-2180142089-r2" x="0" y="166.4" textLength="378.2" clip-path="url(#terminal-2180142089-line-6)">&#160;&#160;&#160;&#160;se&#160;resolvió&#160;a:&#160;/srv/modelos</text><text class="terminal-2180142089-r2" x="1268.8" y="166.4" textLength="12.2" clip-path="url(#terminal-2180142089-line-6)">
+</text><text class="terminal-2180142089-r2" x="0" y="190.8" textLength="915" clip-path="url(#terminal-2180142089-line-7)">[gpu]&#160;servicio&#160;&#x27;ia&#x27;:&#160;pide&#160;GPU&#160;NVIDIA&#160;pero&#160;este&#160;host&#160;no&#160;parece&#160;tenerla&#160;lista</text><text class="terminal-2180142089-r2" x="1268.8" y="190.8" textLength="12.2" clip-path="url(#terminal-2180142089-line-7)">
+</text><text class="terminal-2180142089-r2" x="0" y="215.2" textLength="1000.4" clip-path="url(#terminal-2180142089-line-8)">&#160;&#160;&#160;&#160;no&#160;se&#160;encontró&#160;ningún&#160;/dev/nvidia*&#160;en&#160;este&#160;host;&#160;nvidia-smi&#160;no&#160;está&#160;en&#160;el&#160;PATH</text><text class="terminal-2180142089-r2" x="1268.8" y="215.2" textLength="12.2" clip-path="url(#terminal-2180142089-line-8)">
+</text><text class="terminal-2180142089-r2" x="1268.8" y="239.6" textLength="12.2" clip-path="url(#terminal-2180142089-line-9)">
+</text><text class="terminal-2180142089-r2" x="0" y="264" textLength="561.2" clip-path="url(#terminal-2180142089-line-10)">4&#160;problema(s)&#160;encontrado(s)&#160;antes&#160;de&#160;arrancar.</text><text class="terminal-2180142089-r2" x="1268.8" y="264" textLength="12.2" clip-path="url(#terminal-2180142089-line-10)">
 </text>
     </g>
     </g>
