@@ -21,6 +21,12 @@ Tres cosas que Docker solo descubre en el momento:
 `composeready` lee el YAML y comprueba las tres cosas contra el host real
 en el que se ejecuta, sin arrancar ningún contenedor.
 
+## Así se ve
+
+![Salida de composeready sobre un proyecto de ejemplo](docs/img/demo.svg)
+
+<sub>Ejecución real sobre un `compose.yaml` cuyo puerto ya está ocupado, con carpetas que no existen y que pide una GPU que el equipo no tiene (todos los datos son ficticios).</sub>
+
 ## Instalación
 
 ```bash
